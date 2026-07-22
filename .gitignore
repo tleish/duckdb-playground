@@ -1,0 +1,32 @@
+#####=== Exclude ALL Hidden Files ===#####
+# see: https://dev.to/gajus/gitignore-mistake-that-everyone-makes-44kb
+.*
+
+#####=== Include These Hidden Files ===#####
+!.gitignore
+!.keep
+!.tool-versions
+!.ruby-version
+!.gitlab-ci.yml
+!.overcommit.yml
+!.claude
+
+#####=== System files ===#####
+Thumbs.db
+
+#####=== Exclude directories ===#####
+coverage/
+
+# DuckDB persistent database files (we query CSVs directly; these are scratch)
+*.duckdb
+*.duckdb.wal
+*.db
+
+# Query logs (SQL + results written here to avoid consuming context)
+logs/
+
+# Full result-set exports (-csv/-json), never read back into session context
+data/*
+!data/.keep
+tmp/*
+!tmp/.keep
