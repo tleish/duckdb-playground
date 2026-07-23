@@ -46,31 +46,20 @@ a Mac).
 > (`duckdb -ui`) on macOS. If you plan to use the UI, install 1.4.5 instead — the
 > install page lets you pick a specific version.
 
-### 2. No plugin to install — the skill ships with this repo
-
-This project already includes a `duckdb-analyst` skill
-(`.claude/skills/duckdb-analyst/`) that Claude Code picks up automatically when
-you open this folder. It covers general DuckDB workflow, token hygiene, and
-multi-format read syntax (CSV/JSON/Parquet/Excel/SQLite/Avro/spatial/S3/HTTPS)
-— nothing more to set up.
-
-You can still run `duckdb` commands directly yourself at any time. Either way,
-you read the same SQL. That is the whole point.
-
-### 3. Clone the repo
+### 2. Clone the repo
 
 ```bash
 git clone https://github.com/tleish/duckdb-playground.git
 cd duckdb-playground
 ```
 
-### 4. Generate large test csv files
+### 3. Generate large test csv files
 
 ```bash
 ruby scripts/generate_data.rb
 ```
 
-### 5. Run the tutorial
+### 4. Run the tutorial
 
 See [`TUTORIAL.md`](TUTORIAL.md) for a set of queries to run yourself that
 walk through `DESCRIBE`/`SUMMARIZE`, views, and join patterns across all three
